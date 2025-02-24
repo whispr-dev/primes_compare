@@ -1,0 +1,1 @@
+C++ has similar build flags (like -Ofast, link-time optimization with -flto, etc.) that can make a difference too.
