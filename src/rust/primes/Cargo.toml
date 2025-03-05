@@ -1,0 +1,19 @@
+[package]
+name = "r-primes"
+version = "0.2.0"
+edition = "2021"
+
+[build]
+rustflags = [
+  "-C", "target-cpu=native",
+  "-C", "opt-level=3",
+  "-C", "lto=yes",
+] # Or "s" for size or "3" for speed.
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+
+[dependencies]
+bitvec = "1.0"
+rayon = "1.7"
